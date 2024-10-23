@@ -1,0 +1,47 @@
+Here is a list of Scheduled Tasks on Citadel Servers that allow you to have a server restart at a set time with warnings to players. Read All. 
+Feel free to Watch the Youtube Video to Help:
+
+SERVER RESTART
+1) In the Citadel Servers Game Services on your server. You will see a clock that is labeled Scheduled Tasks. Click this. 
+2) Press the plus button next to the refresh to add a new task. 
+3) Select Scheduled Start/Stop/Restart Task.
+4) Fill out the fields as follows:
+    	Name: Server Restart
+    	Type: Daily
+    	Start: Pick a time you want it to start (6pm for me).
+    	Recur Every: 1 Days
+    	Check Repeat Task
+    	Repeat Every: 4 Hours (This will be for servers that’s want to restart every 4 hours)
+    	For: 24 Hours
+
+
+
+RESTART WARNINGS
+1) In the Citadel Servers Game Services on your server. You will see a clock that is labeled Scheduled Tasks. Click this. 
+2) Press the plus button next to the refresh to add a new task. 
+3) Select Scheduled Console/Rcon Command.
+4) Fill out the fields as follows:
+    Command to Execute:	say -1 "Server will restart in 30 minutes. Please prepare and save your progress."	
+    Name: 30 min warning
+    	Type: Daily
+    	Start: 5:30pm (30 min before 6pm for me).
+    	Recur Every: 1 Days
+    	Check Repeat Task
+    	Repeat Every: 4 Hours (This will be for servers that’s want to restart every 4 hours)
+    	For: 24 Hours
+    5) Repeat this for 15, 10, 5, 2 or how ever long before a restart. 
+
+
+
+SETUP RCON TO WORK
+1) Once you have your commands you will need to go and add your RCON password into your serverDZ.cfg file. I put mine at the bottom of the page. 
+2) You can get the RCON port where you see all your IP addresses.
+
+    rconPort = (YOUR PORT HERE);  // Use the correct RCON port here, you might need to confirm this with your server provider.
+    rconPassword = "INSERTPASSWORD";  // Replace with your actual RCON password.
+    rconIP = "";  // Keep this blank to bind to all IP addresses or specify an IP if required.
+    rconMaxPing = 1000;  // Adjust this if players have high ping or to avoid RCON disconnection issues.
+
+3) Go to Activity and Stats on the left and click RCON Client. 
+4) Type the password that you put in your file and for the RCON Command do a test: say -1 "Test”
+5) If all works you should be good to go with server restarts. It will show you the last time it was executed.
